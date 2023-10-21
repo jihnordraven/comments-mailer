@@ -85,15 +85,15 @@ Now the application should listen amqp connection
 Build docker image
 
 ```bash
-$ docker build -t comments-users-auth:latest .
+$ docker build -t comments-mailer:latest .
 
-$ docker start comments-users-auth:latest
+$ docker start comments-mailer:latest
 ```
 
 Check application logs
 
 ```bash
-$ docker exec -it comments-users-auth:latest sh
+$ docker exec -it comments-mailer:latest sh
 ```
 
 Now the application should listen amqp connection
