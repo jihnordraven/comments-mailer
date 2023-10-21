@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: mailer-deployment
+    labels:
+        app: mailer-deployemnt
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            app: mailer
+    template:
+        metadata:
+            labels:
+                app: mailer
+        spec:
+            containers:
+                - name: mailer-container
+                  image: jihnordraven/comments-mailer:latest
