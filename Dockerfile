@@ -14,4 +14,4 @@ RUN yarn build
 
 EXPOSE 4300
 
-CMD ["yarn prod"]
+CMD ["yarn", "prod"]
