@@ -24,7 +24,7 @@
 
 ## Description
 
-users-auth restfull | graphql api-gateway for comments-app
+mailer nest.js microservice | amqp connection | sending emails by events
 
 ## Prerequirements for local development
 
