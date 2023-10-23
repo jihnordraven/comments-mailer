@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core'
 import { AppModule } from './app.module'
-import { MicroserviceOptions, NestMicroservice, Transport } from '@nestjs/microservices'
+import { MicroserviceOptions, Transport } from '@nestjs/microservices'
 import { INestMicroservice, Logger } from '@nestjs/common'
 import { blue, red } from 'colorette'
 

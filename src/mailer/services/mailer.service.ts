@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { SendMailOptions, Transporter, createTransport } from 'nodemailer'
-import { bgCyan } from 'colorette'
+import { black } from 'colorette'
 
 @Injectable()
 export class MailerService {
@@ -22,11 +22,12 @@ export class MailerService {
 
 	public async userCreated(email: string): Promise<void> {
 		await this.options({
-			from: this.config.getOrThrow<string>('NODEMAILER_SERVICE'),
+			from: this.config.getOrThrow<string>('NODEMAILER_USER'),
 			to: email,
-			subject: 'Welcomme!',
+			subject: 'Welcome!',
 			html: '<h1>Thank you for using "Comments App"!</h1>'
 		})
-		this.logger.log(bgCyan(`Sent an ematil to user: ${email}`))
+
+		this.logger.log(black(`Sent an email to user: ${email}`))
 	}
 }
