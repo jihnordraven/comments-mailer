@@ -39,12 +39,6 @@ $ docker ps
 ```
 
 ```bash
-# run postgres container on port:5432 (connect: psql postgresql://guest:guest@localhost:5432)
-$ docker run -d --name postgres -p 5432:5432 -e POSTGRES_USER=guest -e POSTGRES_PASSWORD=guset postgresql
-$ docker ps
-```
-
-```bash
 # to stop or delete these containers you can follow:
 $ docker stop -container_name-
 $ docker rm -container_name-
