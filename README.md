@@ -29,6 +29,7 @@ mailer nest.js microservice | amqp connection | sending emails by events
 ## Prerequirements for local development
 
 1. Needs to have docker desktop installed on your machine
+2. Create .env file, paste .local.env and copy to .env
 
 ## Launch rabbitmq & postgres with docker
 
