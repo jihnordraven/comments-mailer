@@ -34,8 +34,12 @@ mailer nest.js microservice | amqp connection | sending emails by events
 
 ```bash
 # run rabbitmq container on port:5672 (web: http://localhost:15672 (guest:guest))
-$ docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
-$ docker ps
+$ docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbitmq \
+  -e RABBITMQ_DEFAULT_USER=admin \
+  -e RABBITMQ_DEFAULT_PASS=admin \
+  rabbitmq:management
+
+$ docker logs rabbitmq
 ```
 
 ```bash
