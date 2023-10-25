@@ -9,6 +9,8 @@ const logger: Logger = new Logger('bootstrap')
 const RMQ_HOST: string = String(process.env.RMQ_HOST)
 const RMQ_QUEUE: string = String(process.env.RMQ_QUEUE)
 
+let app: INestMicroservice
+
 async function bootstrap() {
 	const app: INestMicroservice =
 		await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, {
@@ -26,4 +28,7 @@ async function bootstrap() {
 			logger.error(red(`Something went wrong... Learn more at: ${err}`))
 		)
 }
+
+export default app
+
 bootstrap()
